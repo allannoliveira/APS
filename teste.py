@@ -14,10 +14,10 @@ lista_dist = []
 
 def menu():
     print("----MENU----")
-    print("(1) Materiais")
-    print("(2) Ecopontos")
-    print("(3) Endereço mais próximo")
-    print("(4) Pontos Negativos")
+    print("(1) - Materiais")
+    print("(2) - Ecopontos")
+    print("(3) - Endereço mais próximo")
+    print("(4) - Pontos Negativos")
 menu()
 
 opcao = int(input("Digite a sua escolha: "))
@@ -29,18 +29,18 @@ if opcao == 2:
     print("Ecoponto Região Central (Rua Francisco Theodoro, 1050, Vila Industrial", "Ecoponto Parque Itajaí (Rua Celso Soares Couto" "Ecoponto Parque São Jorge  (R. Plácida Pretini, 196-270 - Parque São Jorge, Campinas - SP, 13064-812", "Ecoponto Jardim São Gabriel (R. José Martins Lourenço, 140-284 - Jardim São Gabriel, Campinas - SP, 13045-310", "Ecoponto Parque Via Norte (Rua dos Cambarás, 200 - Vila Boa Vista, Campinas - SP, 13064-740", "Ecoponto Vida Nova (R. Lídia Martins de Assis - Conj. Hab. Vida Nova, Campinas - SP, 13057-558", "Ecoponto Jardim Eulina (Av. Mal. Rondon, 2296-2382 - Jardim Chapadão, Campinas - SP, 13063-490)")
 
 if opcao == 3:
-    endereco = pycep_correios.get_address_from_cep(str(input("Insira seu CEP, (Exemplo 0000-0000)")))
+    endereco = pycep_correios.get_address_from_cep(str(input("Insira seu CEP, (Exemplo 0000-0000): ")))
     geolocator = Nominatim(user_agent="APP")
     geocode = RateLimiter(geolocator.geocode, min_delay_seconds=1)
     location = geolocator.geocode(endereco["logradouro"] + "," + endereco["cidade"] + "," + endereco["uf"])
     
     user = (location.latitude, location.longitude)
     
-    y = 0
-    while y <=6:
-        distancia = distance.distance(user, (lista_latitude[y], lista_longitude[y])).km
+    x = 0
+    while x <=6:
+        distancia = distance.distance(user, (lista_latitude[x], lista_longitude[x])).km
         lista_dist.append(distancia)
-        y = y + 1
+        x = x + 1
 
     posicao = lista_dist.index(min(lista_dist))
 
