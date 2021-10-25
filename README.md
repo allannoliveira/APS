@@ -1,2 +1,4 @@
-# APS
-APS 2 Semestre UNIP
+# Instruções Básicas
+##### LIBS 
+###### pip install geopy
+pip install pycep-correios
