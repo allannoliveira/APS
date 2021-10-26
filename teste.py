@@ -36,23 +36,12 @@ if opcao == 3:
     
     user = (location.latitude, location.longitude)
     
-    x = 0
-    while x <=6:
-        distancia = distance.distance(user, (lista_latitude[x], lista_longitude[x])).km
+    cont = 0
+    while cont <=6:
+        distancia = distance.distance(user, (lista_latitude[cont], lista_longitude[cont])).km
         lista_dist.append(distancia)
-        x = x + 1
+        cont = cont + 1
 
     posicao = lista_dist.index(min(lista_dist))
 
     print("O local de descarte mais próximo é:", lista_ecoponto[posicao])
-
-    
-    
- 
-
-
-
-    
-
-    
-
