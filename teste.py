@@ -1,15 +1,17 @@
+# -*- coding: utf-8 -*-
 from geopy.geocoders import Nominatim
 from geopy import distance
 from geopy.extra.rate_limiter import RateLimiter
 import pycep_correios
 
-
-
+# lista de latitude e longitude dos pontos usados.
 lista_latitude = [-22.90960695482419, -22.961589033721893, -22.895783162242807, -22.94191480203785, -22.885390241942066, -22.977346943429804, -22.8916416403587]
 lista_longitude = [-47.067624773108015, -47.19183587550159, -47.15577551598152, -47.02967678159626, -47.127989301944176, -47.176806659614066,  -47.10025645461092]
 
+#lista com os endereços convertidos para retorno ao usuário.
 lista_ecoponto = ["Ecoponto Região Central (Rua Francisco Theodoro, 1050, Vila Industrial)", "Ecoponto Parque Itajaí (Rua Celso Soares Couto)","Ecoponto Parque São Jorge  (R. Plácida Pretini, 196-270 - Parque São Jorge, Campinas - SP, 13064-812", "Ecoponto Jardim São Gabriel  (R. José Martins Lourenço, 140-284 - Jardim São Gabriel, Campinas - SP, 13045-310", "Ecoponto Parque Via Norte  (Rua dos Cambarás, 200 - Vila Boa Vista, Campinas - SP, 13064-740", "Ecoponto Vida Nova   (R. Lídia Martins de Assis - Conj. Hab. Vida Nova, Campinas - SP, 13057-558","Ecoponto Jardim Eulina (Av. Mal. Rondon, 2296-2382 - Jardim Chapadão, Campinas - SP, 13063-490"]
 
+# lista com o calculo do usuário com as lista de latitude e longitude
 lista_dist = []
 
 def menu():
@@ -23,18 +25,23 @@ menu()
 opcao = int(input("Digite a sua escolha: "))
 
 if opcao == 1:
-    funcao =int(input("Escolha um dester materiais \n((1) Metal, (2) Plástico, (3) Eletrônico, (4) Baterias, (5)  Vidro)"))
+    
+    funcao =int(input("Escolha um desses materiais \n((1) Metal, (2) Plástico, (3) Eletrônico, (4) Baterias, (5)  Vidro): "))
     
     if funcao == 1:
-        print("O primeiro metal descoberto foi o cobre, ainda na pré-história, no oriente médio. Com a descoberta deste material e posteriormente de outros metais foi possível desenvolver ferramentas mais eficientes que as de pedra. Com o uso do metal também foi possível fabricar a roda. Hoje em dia ele é encontrado em nossa casa (ex: panelas, armários, talheres), nos automóveis, nas embalagens de alimentos, etc. Ele é sólido, não deixa passar luz (é opaco) e conduz bem a eletricidade e o calor, possuindo um brilho especial chamado de metálico. Quando aquecido é maleável, podendo ser moldado em várias formas, desde fios até chapas e barras. Os metais podem ser encontrados misturados no solo e nas rochas, sendo chamados de minérios. Composição do Metal Os minérios são substâncias encontradas em solos e rochas de onde é possível extrair os metais. Alguns metais, tais como o ferro e o cobre, são extraídos dos minérios já na forma a se utilizada. Outros, como o aço e o bronze, precisam ser associados a outras substâncias (ex: aço = ferro + carvão).")
+        print("Algumas das principais características dos metais é a alta capacidade para conduzir calor e eletricidade e quando polidos eles ganham um brilho característico, também possuindo alta densidade eles podem ser usados como reforço para estruturas e como utensílios para cozinha ou como ferramentas para obras. Metais também são formadores de cátions que são moléculas com o número de cátions maior que o de ânions.")
+
     if funcao == 2:
-        print("O primeiro plástico sintético foi desenvolvido no início do século XX, e registrou um desenvolvimento acelerado a partir de 1920. Este material, relativamente novo se comparado a outros como o vidro e o papel, passou a estar presente em grande parte dos nossos utensílios. O plástico vem das resinas derivadas do petróleo e pertence ao grupo dos polímeros (moléculas muito grandes, com características especiais e variadas). A palavra plástico tem origem grega e significa aquilo que pode ser moldado. Além disso, uma importante característica do plástico é manter a sua forma após a moldagem. alguns dos tipos de Plásticos são: Os mais rígidos, os fininhos e fáceis de amassar, os transparentes, etc… Eles são divididos em dois grupos de acordo com as suas características de fusão ou derretimento: termoplásticos e termorrígidos. Os termoplásticos são aqueles que amolecem ao serem aquecidos, podendo ser moldados, e quando resfriados ficam sólidos e tomam uma nova forma. Esse processo pode ser repetido várias vezes. Correspondem a 80% dos plásticos consumidos. Ex: polipropileno, polietileno. Os termorrígidos ou termofixos são aqueles que não derretem quando aquecidos, o que impossibilita a sua reutilização através dos processos convencionais de reciclagem. Ex: poliuretano rígido. Em alguns casos, estes materiais podem ser reciclados parcialmente através de moagem prévia e incorporação no material virgem em pequenas quantidades, como ocorre com os elastômeros (borracha).")
+        print("O plástico está presente em quase todos os lugares do mundo moderno, sendo criado no final do século xx e tendo seu nome derivado do grego que significa aquilo que pode ser moldado sendo barato e de fácil manuseio esse material foi ganhando espaço durante os anos sendo criado a partir da resina do petróleo e pertencendo ao grupo dos polimeros também existem plásticos que são derivados de plantas como do algodão porém sua produção é mais complexa resultando em uma produção em menor escala")
+
     if funcao == 3:
-        print("O lixo eletrônico é um dos grandes desafios da sociedade atual graças à obsolescência programada e nossa natureza consumista, há muitos dispositivos eletrônicos no lixo causando grandes danos ao meio ambiente. O lixo eletrônico ou Resíduos de Equipamentos Elétricos e Eletrônicos (REEE) são todos os dispositivos eletroeletrônicos, de celulares, tablets e computadores a TVs, lavadoras de louça e de roupa, geladeiras e etc., que foram descartados por seus donos. Há uma preocupação com certos dispositivos descartados de forma irregular (jogados no lixo comum, por exemplo), como celulares, tablets, computadores e outros com baterias, pois estas contêm elementos altamente danosos ao meio ambiente, que não podem ser jogados em qualquer lugar. Além disso, esses aparelhos contém materiais valiosos e metais raros, úteis para fabricar outros eletrônicos com material reciclado.")
+        print("Na reciclagem do lixo eletrônico nem tudo que está la pode ser considerado descartável pois dentro de cada eletrônico ainda existem componentes que podem ser reciclados esses componentes que ainda podem ser reciclados são enviados para a industria onde são derretidos e transformados em matéria prima novamente o lixo eletrônico é um amontoado de todos os outros materiais oque acaba dificultando em sua reciclagem.")
+
     if funcao == 4:
-        print("Não é novidade para quase ninguém que utilizamos cada vez mais aparelhos eletrônicos em nossas rotinas diárias: smartphones, notebooks, controles remotos diversos...A maioria deles, se não todos, têm como fonte de energia as baterias e pilhas.  Mas, você sabe como fazer o descarte correto desses componentes e como é feita a reciclagem de pilhas e baterias usadas? Apesar de existirem diversos modelos, as pilhas e baterias são dispositivos praticamente iguais. Uma bateria nada mais é do que uma sequência de pilhas formadas por agrupamentos em série ou em paralelo. Antes de mais nada, é preciso entender os motivos pelos quais estes resíduos não devem ser descartados no lixo comum (já que vão parar em aterros sanitários) ou deixados nas ruas para que catadores o recolham. As pilhas e as baterias possuem componentes tóxicos prejudiciais ao meio ambiente e à saúde, tais quais mercúrio (a maioria das pilhas botão, alcalinas e de óxido de prata), cádmio (pilhas recarregáveis), chumbo, zinco e níquel. Caso sejam incineradas, os gases resultantes darão lugar a elementos tóxicos voláteis, ou seja, que contaminam o ar. Se descartadas em aterros ou nas ruas, podem intoxicar o solo, os rios e, por consequência, vegetais e animais, além de causar problemas à saúde humana, já que nossos organismos não metabolizam essas substâncias. Com isso, podemos ter problemas graves no sistema nervoso e até câncer. Cada tipo de pilha contém, pelo menos, dois metais presentes em duas formas químicas diferentes, como metais puros e óxidos. Desta forma, ainda que nem todas as pilhas sejam iguais e nem apresentem o mesmo risco ao meio ambiente e à saúde, toda pilha que possui alta concentração de metais deve ser considerada um elemento potencialmente perigoso.")
+        print("As baterias como as pilhas por exemplo são formadas por dois eletrodos e um eletrolito e suas matéias primas são zinco metálico, pasta de cloreto de amonio, água, dióxido de manganês e grafita tendo a capacidade de transformar a energia quimica em energia eletrica ja a bateria de carro precisa de chumbo, ácido sulfúrico e plástico ja para o ativo da bateria são usados oxidos de chumbo em pó, agua e dependendo da sua carga será adicionado aditivos diferentes.")
+    
     if funcao == 5:
-        print("O vidro é feito de uma mistura de matérias-primas naturais. Conta-se que ele foi descoberto por acaso, quando, ao fazerem fogueiras na praia, os navegadores perceberam que a areia e o calcário (conchas) se combinaram através da ação da alta temperatura. Há registros de sua utilização desde 7.000 a.C. por sírios, fenícios e babilônios. Hoje o vidro está muito presente em nossa civilização e pode ser moldado de qualquer maneira: nos pára-brisas e janelas dos automóveis, lâmpadas, garrafas, compotas, garrafões, frascos, recipientes, copos, janelas, lentes, tela de televisores e monitores, fibra ótica e etc. As matérias-primas do vidro sempre foram as mesmas há milhares de anos. Somente a tecnologia é que mudou, acelerando o processo e possibilitando maior diversidade para seu uso. O vidro é composto por areia, calcário, barrilha (carbonato de sódio), alumina (óxido de alumínio) e corantes ou descorantes.")
+        print("O vidro é um dos poucos materiais que podem ser 100% reciclados não perdendo nada no processo, existe também um tipo de vidro chamado de insulado que é capaz de impedir o som e o calor de entrar no ambiente sem perder a luminosidade no processo, em fachadas de estruturas os tipos de vidro que devem ser usados são laminados, aramados e insulados para a fabricação do vidro são usados areia, sódio, cálcio e magnésio e todos eles são misturados em um forno podendo chegar até temperaturas de 1600°C.")
 
 if opcao == 2:
     print("Ecoponto Região Central (Rua Francisco Theodoro, 1050, Vila Industrial", "Ecoponto Parque Itajaí (Rua Celso Soares Couto" "Ecoponto Parque São Jorge  (R. Plácida Pretini, 196-270 - Parque São Jorge, Campinas - SP, 13064-812", "Ecoponto Jardim São Gabriel (R. José Martins Lourenço, 140-284 - Jardim São Gabriel, Campinas - SP, 13045-310", "Ecoponto Parque Via Norte (Rua dos Cambarás, 200 - Vila Boa Vista, Campinas - SP, 13064-740", "Ecoponto Vida Nova (R. Lídia Martins de Assis - Conj. Hab. Vida Nova, Campinas - SP, 13057-558", "Ecoponto Jardim Eulina (Av. Mal. Rondon, 2296-2382 - Jardim Chapadão, Campinas - SP, 13063-490)")
@@ -58,4 +65,31 @@ if opcao == 3:
     print("O local de descarte mais próximo é:", lista_ecoponto[posicao])
 
 if opcao == 4:
-    print("error")
+    print("Malefícios")
+    print("Escreva o nome do material desejado \n( Metal, Plástico, Eletrônico, Baterias, Vidros)")
+    
+    funcao1 = input("Digite o item que deseja saber os maleficios no meio ambiente: ")
+    
+    if funcao1 == "metal":
+        print("METAL")
+        print("Os locais onde ocorrem a maior fixação destes metais são os solos\n e os sedimentos, mas podem ser poluentes das águas e alimentos.\n Além disso, podem ser transportados pela ar através de partículas\n em suspensão, podendo contaminar o homem pelas via aéreas.")
+
+    if funcao1 == "plastico":
+        print("PLÁSTICO")
+        print("No meio ambiente, os problemas são bem graves. O plástico é difícil\n de ser compactado e gera um grande volume de lixo.\n Portanto, ele ocupa um grande espaço no meio ambiente, o que dificulta\n a decomposição de outros materiais orgânicos. A durabilidade e resistência do plástico viram problemas após o descarte.")
+    
+    if funcao1 == "papel":
+        print("PAPEL")
+        print("Você sabia que a fabricação de papel é um dos processos mais poluentes que existem?\n Produzir uma tonelada de papel emite mais de 1.5 toneladas de CO2 equivalente.\n Ou seja, usá-lo menos vai ajudar a reduzir a quantidade de substâncias nocivas na atmosfera.")
+    
+    if funcao1 == "eletronico":
+        print("ELETRÔNICO")
+        print("O lixo eletrônico libera substâncias tóxicas no solo e no ar. Os maiores problemas a saúde são os problemas respiratórios e ao sistema nervoso que é feita pela contaminação do organismo com o mercúrio, chumbo, cádmio que estão presentes na maioria destes produtos. ")
+    
+    if funcao1 == "baterias":
+        print("BATERIAS")
+        print("O descarte de baterias e pilhas de maneira incorreta, podem contaminar o solo e os lençóis freáticos. Algumas destas baterias são feitas com chumbo, mercúrio, níquel e cadmio que podem acarretar em doenças renais, câncer e problemas ao sistema nervoso.")
+    
+    if funcao1 == "vidros":
+        print("VIDROS")
+        print("Em períodos onde há mais chuvas, como o verão, o risco da leptospirose aumenta, pois há maior\n probabilidade de haver enchentes, inundações e, consequentemente, maior contato com o transmissor da doença.\n A leptospirose é uma doença grave, que pode levar até a morte,\n mas que pode ser tratada”, afirma Tânia.")
