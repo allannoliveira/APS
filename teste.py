@@ -44,7 +44,13 @@ if opcao == 1:
         print("O vidro é um dos poucos materiais que podem ser 100% reciclados não perdendo nada no processo, existe também um tipo de vidro chamado de insulado que é capaz de impedir o som e o calor de entrar no ambiente sem perder a luminosidade no processo, em fachadas de estruturas os tipos de vidro que devem ser usados são laminados, aramados e insulados para a fabricação do vidro são usados areia, sódio, cálcio e magnésio e todos eles são misturados em um forno podendo chegar até temperaturas de 1600°C.")
 
 if opcao == 2:
-    print("Ecoponto Região Central (Rua Francisco Theodoro, 1050, Vila Industrial", "Ecoponto Parque Itajaí (Rua Celso Soares Couto" "Ecoponto Parque São Jorge  (R. Plácida Pretini, 196-270 - Parque São Jorge, Campinas - SP, 13064-812", "Ecoponto Jardim São Gabriel (R. José Martins Lourenço, 140-284 - Jardim São Gabriel, Campinas - SP, 13045-310", "Ecoponto Parque Via Norte (Rua dos Cambarás, 200 - Vila Boa Vista, Campinas - SP, 13064-740", "Ecoponto Vida Nova (R. Lídia Martins de Assis - Conj. Hab. Vida Nova, Campinas - SP, 13057-558", "Ecoponto Jardim Eulina (Av. Mal. Rondon, 2296-2382 - Jardim Chapadão, Campinas - SP, 13063-490)")
+    print("- Ecoponto Região Central (Rua Francisco Theodoro, 1050, Vila Industrial)")
+    print("- Ecoponto Parque Itajaí (Rua Celso Soares Couto)")
+    print("- Ecoponto Parque São Jorge  (R. Plácida Pretini, 196-270 - Parque São Jorge, Campinas - SP, 13064-812)")
+    print("- Ecoponto Jardim São Gabriel (R. José Martins Lourenço, 140-284 - Jardim São Gabriel, Campinas - SP, 13045-310)")
+    print("- Ecoponto Parque Via Norte (Rua dos Cambarás, 200 - Vila Boa Vista, Campinas - SP, 13064-740)")
+    print("- Ecoponto Vida Nova (R. Lídia Martins de Assis - Conj. Hab. Vida Nova, Campinas - SP, 13057-558)")
+    print("- Ecoponto Jardim Eulina (Av. Mal. Rondon, 2296-2382 - Jardim Chapadão, Campinas - SP, 13063-490)")
 
 if opcao == 3:
     endereco = pycep_correios.get_address_from_cep(str(input("Insira seu CEP: \n(Exemplo 0000-0000)" )))
@@ -66,30 +72,31 @@ if opcao == 3:
 
 if opcao == 4:
     print("Malefícios")
+    print("----------------------------")
     print("Escreva o nome do material desejado \n( Metal, Plástico, Eletrônico, Baterias, Vidros)")
     
     funcao1 = input("Digite o item que deseja saber os maleficios no meio ambiente: ")
     
     if funcao1 == "metal":
-        print("METAL")
+        print("----------- METAL -----------")
         print("Os locais onde ocorrem a maior fixação destes metais são os solos\n e os sedimentos, mas podem ser poluentes das águas e alimentos.\n Além disso, podem ser transportados pela ar através de partículas\n em suspensão, podendo contaminar o homem pelas via aéreas.")
 
     if funcao1 == "plastico":
-        print("PLÁSTICO")
+        print("----------- PLÁSTICO -----------")
         print("No meio ambiente, os problemas são bem graves. O plástico é difícil\n de ser compactado e gera um grande volume de lixo.\n Portanto, ele ocupa um grande espaço no meio ambiente, o que dificulta\n a decomposição de outros materiais orgânicos. A durabilidade e resistência do plástico viram problemas após o descarte.")
     
     if funcao1 == "papel":
-        print("PAPEL")
+        print("----------- PAPEL -----------")
         print("Você sabia que a fabricação de papel é um dos processos mais poluentes que existem?\n Produzir uma tonelada de papel emite mais de 1.5 toneladas de CO2 equivalente.\n Ou seja, usá-lo menos vai ajudar a reduzir a quantidade de substâncias nocivas na atmosfera.")
     
     if funcao1 == "eletronico":
-        print("ELETRÔNICO")
+        print("----------- ELETRÔNICO -----------")
         print("O lixo eletrônico libera substâncias tóxicas no solo e no ar. Os maiores problemas a saúde são os problemas respiratórios e ao sistema nervoso que é feita pela contaminação do organismo com o mercúrio, chumbo, cádmio que estão presentes na maioria destes produtos. ")
     
     if funcao1 == "baterias":
-        print("BATERIAS")
+        print("----------- BATERIAS -----------")
         print("O descarte de baterias e pilhas de maneira incorreta, podem contaminar o solo e os lençóis freáticos. Algumas destas baterias são feitas com chumbo, mercúrio, níquel e cadmio que podem acarretar em doenças renais, câncer e problemas ao sistema nervoso.")
     
     if funcao1 == "vidros":
-        print("VIDROS")
+        print("----------- VIDROS -----------")
         print("Em períodos onde há mais chuvas, como o verão, o risco da leptospirose aumenta, pois há maior\n probabilidade de haver enchentes, inundações e, consequentemente, maior contato com o transmissor da doença.\n A leptospirose é uma doença grave, que pode levar até a morte,\n mas que pode ser tratada”, afirma Tânia.")
