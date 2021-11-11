@@ -52,20 +52,20 @@ if opcao == 1:
 
     
     if funcao == 1:
-        print("Algumas das principais características dos metais é a alta capacidade para conduzir calor e eletricidade e quando polidos eles ganham um brilho característico, também possuindo alta densidade eles podem ser usados como reforço para estruturas e como utensílios para cozinha ou como ferramentas para obras. Metais também são formadores de cátions que são moléculas com o número de cátions maior que o de ânions.")
+        print("- Algumas das principais características dos metais é a alta capacidade para conduzir calor e eletricidade e quando polidos eles ganham um brilho característico, também possuindo alta densidade eles podem ser usados como reforço para estruturas e como utensílios para cozinha ou como ferramentas para obras. Metais também são formadores de cátions que são moléculas com o número de cátions maior que o de ânions.")
         
     
     elif funcao == 2:
-        print("O plástico está presente em quase todos os lugares do mundo moderno, sendo criado no final do século xx e tendo seu nome derivado do grego que significa aquilo que pode ser moldado sendo barato e de fácil manuseio esse material foi ganhando espaço durante os anos sendo criado a partir da resina do petróleo e pertencendo ao grupo dos polimeros também existem plásticos que são derivados de plantas como do algodão porém sua produção é mais complexa resultando em uma produção em menor escala")
+        print("- O plástico está presente em quase todos os lugares do mundo moderno, sendo criado no final do século xx e tendo seu nome derivado do grego que significa aquilo que pode ser moldado sendo barato e de fácil manuseio esse material foi ganhando espaço durante os anos sendo criado a partir da resina do petróleo e pertencendo ao grupo dos polimeros também existem plásticos que são derivados de plantas como do algodão porém sua produção é mais complexa resultando em uma produção em menor escala")
 
     elif funcao == 3:
-        print("Na reciclagem do lixo eletrônico nem tudo que está la pode ser considerado descartável pois dentro de cada eletrônico ainda existem componentes que podem ser reciclados esses componentes que ainda podem ser reciclados são enviados para a industria onde são derretidos e transformados em matéria prima novamente o lixo eletrônico é um amontoado de todos os outros materiais oque acaba dificultando em sua reciclagem.")
+        print("- Na reciclagem do lixo eletrônico nem tudo que está la pode ser considerado descartável pois dentro de cada eletrônico ainda existem componentes que podem ser reciclados esses componentes que ainda podem ser reciclados são enviados para a industria onde são derretidos e transformados em matéria prima novamente o lixo eletrônico é um amontoado de todos os outros materiais oque acaba dificultando em sua reciclagem.")
 
     elif funcao == 4:
-        print("As baterias como as pilhas por exemplo são formadas por dois eletrodos e um eletrolito e suas matéias primas são zinco metálico, pasta de cloreto de amonio, água, dióxido de manganês e grafita tendo a capacidade de transformar a energia quimica em energia eletrica ja a bateria de carro precisa de chumbo, ácido sulfúrico e plástico ja para o ativo da bateria são usados oxidos de chumbo em pó, agua e dependendo da sua carga será adicionado aditivos diferentes.")
+        print("- As baterias como as pilhas por exemplo são formadas por dois eletrodos e um eletrolito e suas matéias primas são zinco metálico, pasta de cloreto de amonio, água, dióxido de manganês e grafita tendo a capacidade de transformar a energia quimica em energia eletrica ja a bateria de carro precisa de chumbo, ácido sulfúrico e plástico ja para o ativo da bateria são usados oxidos de chumbo em pó, agua e dependendo da sua carga será adicionado aditivos diferentes.")
 
     elif funcao == 5:
-        print("O vidro é um dos poucos materiais que podem ser 100% reciclados não perdendo nada no processo, existe também um tipo de vidro chamado de insulado que é capaz de impedir o som e o calor de entrar no ambiente sem perder a luminosidade no processo, em fachadas de estruturas os tipos de vidro que devem ser usados são laminados, aramados e insulados para a fabricação do vidro são usados areia, sódio, cálcio e magnésio e todos eles são misturados em um forno podendo chegar até temperaturas de 1600°C.")
+        print("- O vidro é um dos poucos materiais que podem ser 100% reciclados não perdendo nada no processo, existe também um tipo de vidro chamado de insulado que é capaz de impedir o som e o calor de entrar no ambiente sem perder a luminosidade no processo, em fachadas de estruturas os tipos de vidro que devem ser usados são laminados, aramados e insulados para a fabricação do vidro são usados areia, sódio, cálcio e magnésio e todos eles são misturados em um forno podendo chegar até temperaturas de 1600°C.")
     
     else:
         funcao != "1" and funcao != "2" and funcao != "3" and funcao != "4" and funcao != "5"
