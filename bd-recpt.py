@@ -11,10 +11,10 @@ lista_longitude = [-47.067624773108015, -47.19183587550159, -47.15577551598152, 
 #lista com os endereços convertidos para retorno ao usuário.
 lista_ecoponto = ["Ecoponto Região Central (Rua Francisco Theodoro, 1050, Vila Industrial)", "Ecoponto Parque Itajaí (Rua Celso Soares Couto)","Ecoponto Parque São Jorge  (R. Plácida Pretini, 196-270 - Parque São Jorge, Campinas - SP, 13064-812", "Ecoponto Jardim São Gabriel  (R. José Martins Lourenço, 140-284 - Jardim São Gabriel, Campinas - SP, 13045-310", "Ecoponto Parque Via Norte  (Rua dos Cambarás, 200 - Vila Boa Vista, Campinas - SP, 13064-740", "Ecoponto Vida Nova   (R. Lídia Martins de Assis - Conj. Hab. Vida Nova, Campinas - SP, 13057-558","Ecoponto Jardim Eulina (Av. Mal. Rondon, 2296-2382 - Jardim Chapadão, Campinas - SP, 13063-490"]
 
-# lista com o calculo do usuário com as lista de latitude e longitude
-lista_dist = []
 
-def menu_initial():
+lista_dist = [] # lista com o cálculo do usuário com as lista de latitude e longitude
+
+def menu_initial(): # Menu principal
     
     print('''     ╔════════════════•ೋೋ•═══════════════╗ 
      ║                MENU               ║
@@ -26,7 +26,7 @@ def menu_initial():
      ╚════════════════•ೋೋ•═══════════════╝
     ''')
 
-def menu_mat():
+def menu_mat(): # Menu material
         
     print('''
     ╔═════════•ೋೋ•═════════╗ 
@@ -40,14 +40,14 @@ def menu_mat():
     ╚═════════•ೋೋ•═════════╝   
     ''')
 
-    
-menu_initial()
+  
+menu_initial() # inicialização do menu inicial
 
-opcao = int(input("Digite a sua escolha: "))
+opcao = int(input("Digite a sua escolha: ")) # Entrada do usuário que irá efetuar a escolha
     
-if opcao == 1:
+if opcao == 1: # Inicialização da opção 1 escolhida no menu principal
     
-    menu_mat()
+    menu_mat() # Inicialização do menu do material
 
     funcao = int(input("Escolha o material desejado: "))
 
@@ -79,10 +79,8 @@ if opcao == 1:
     else:
         funcao != "1" and funcao != "2" and funcao != "3" and funcao != "4" and funcao != "5" and funcao != "6"
         print("Opção inválida!!")
-
         
-
-elif opcao == 2:
+elif opcao == 2: # Inicialização da opção 2 escolhida no menu principal
     print("- Ecoponto Região Central (Rua Francisco Theodoro, 1050, Vila Industrial)")
     print("- Ecoponto Parque Itajaí (Rua Celso Soares Couto)")
     print("- Ecoponto Parque São Jorge  (R. Plácida Pretini, 196-270 - Parque São Jorge, Campinas - SP, 13064-812)")
@@ -91,7 +89,7 @@ elif opcao == 2:
     print("- Ecoponto Vida Nova (R. Lídia Martins de Assis - Conj. Hab. Vida Nova, Campinas - SP, 13057-558)")
     print("- Ecoponto Jardim Eulina (Av. Mal. Rondon, 2296-2382 - Jardim Chapadão, Campinas - SP, 13063-490)")
 
-elif opcao == 3:
+elif opcao == 3: # Opção em que o usuário entrará com o CEP e informará o local de coleta mais próximo
     endereco = pycep_correios.get_address_from_cep(str(input("Insira seu CEP: \n(Exemplo 0000-0000)" )))
     geolocator = Nominatim(user_agent="APP")
     geocode = RateLimiter(geolocator.geocode, min_delay_seconds=1)
@@ -109,7 +107,7 @@ elif opcao == 3:
 
     print("O local de descarte mais próximo é:", lista_ecoponto[posicao])
 
-elif opcao == 4:
+elif opcao == 4: # Inicialização da opção 4 escolhida no menu principal - Usuário escolherá o produto em que deseja saber os malefícios para o planeta
     print("Malefícios")
     print("----------------------------")
     
@@ -141,14 +139,14 @@ elif opcao == 4:
         print("----------- VIDROS -----------")
         print("Em períodos onde há mais chuvas, como o verão, o risco da leptospirose aumenta, pois há maior\n probabilidade de haver enchentes, inundações e, consequentemente, maior contato com o transmissor da doença.\n A leptospirose é uma doença grave, que pode levar até a morte,\n mas que pode ser tratada.")
     
-    else:
+    else: # "Função" feita para verificar se a entrada do usuário no menu de material está correta, caso não entrará como opção inválida
         funcao1 != "1" and funcao1 != "2" and funcao1 != "3" and funcao1 != "4" and funcao1 != "5" and funcao1 != "6"
         print("Opção inválida!!")
 
-elif opcao == 5:
+elif opcao == 5: # Inicialização da opção 5 escolhida no menu principal
     print("Obrigado por utilizar nosso APP!!")
     exit()
 
-else:
+else: # "Função" feita para verificar se a entrada do usuário no menu princioal está correta, caso não entrará como opção inválida
     opcao != "1" and opcao != "2" and opcao != "3" and opcao != "4" and opcao != "5"
     print("Opção inválida!!")
