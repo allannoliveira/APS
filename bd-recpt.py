@@ -16,26 +16,28 @@ lista_dist = []
 
 def menu_initial():
     
-    print('''     -------------MENU-------------------
-    |  (1) - Materiais                   |
-    |  (2) - Ecopontos                   |
-    |  (3) - Endereço mais próximo       |
-    |  (4) - Pontos Negativos            |
-    |  (5) - Sair                        |
-     ------------------------------------
+    print('''     ╔════════════════•ೋೋ•═══════════════╗ 
+     ║                MENU               ║
+     ║ (1) - Materiais                   ║
+     ║ (2) - Ecopontos                   ║
+     ║ (3) - Endereço mais próximo       ║
+     ║ (4) - Pontos Negativos            ║
+     ║ (5) - Sair                        ║
+     ╚════════════════•ೋೋ•═══════════════╝
     ''')
 
 def menu_mat():
         
     print('''
-    ------ Materiais -------
-    |  (1) Metal           |
-    |  (2) Plástico        |
-    |  (3) Papel           |     
-    |  (4) Eletrônico      | 
-    |  (5) Baterias        |
-    |  (6) Vidros          |
-        ----------------------
+    ╔═════════•ೋೋ•═════════╗ 
+    ║       Materiais      ║
+    ║  (1) Metal           ║
+    ║  (2) Plástico        ║
+    ║  (3) Papel           ║     
+    ║  (4) Eletrônico      ║ 
+    ║  (5) Baterias        ║
+    ║  (6) Vidros          ║
+    ╚═════════•ೋೋ•═════════╝   
     ''')
 
     
@@ -150,4 +152,3 @@ elif opcao == 5:
 else:
     opcao != "1" and opcao != "2" and opcao != "3" and opcao != "4" and opcao != "5"
     print("Opção inválida!!")
-    
