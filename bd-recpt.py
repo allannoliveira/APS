@@ -62,7 +62,7 @@ if opcao == 1: # Inicialização da opção 1 escolhida no menu principal
     
     elif funcao == 3:
         print("----------- PAPEL -----------")
-        print("")
+        print("Para a produção do papel são extraidas as fibras de celulose e essas são convertidas em papel através de diversos processos industriais. Tendo sido inventado na China por volta século 2 e diferente do que se pensa a sua matéria prima inicial não foi a madeira mas sim as fibras de algodão retirado de roupas velhas e tecidos, com o crescimento da população por volta do século 15 a demanda exigida cresceu ao ponto de precisarem pesquisar outra forma de produzi-lo, assim se decobriu que a madeira poderia substituir as fibras de algodão")
     
     elif funcao == 4:
         print("----------- ELETRÔNICO -----------")
